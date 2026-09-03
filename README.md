@@ -1,47 +1,44 @@
-# 白泽 Prompt 评测工厂 · Baize Prompt Lab
+# 白泽 Prompt 评测工厂
 
-**提示词过评测才出厂。**  
-**A factory that only ships prompts that passed eval.**
+**没跑过的，不出厂。**  
+**No eval, no ship.**
 
-[白泽明理](https://fxai.ai) 的公开评测车间。不是又一个提示词搬运站。Inbox 里的半成品、截图、视频提示词、没跑通的条目，都不会出现在这里。
+别的 prompt 库是粘贴板。这里是车间：过四道闸才上架。Inbox 里的半成品、截图、视频词、没跑通的，全部留下，不进这个仓。
 
-**给谁。** 已经在用 Cursor / Claude Code / Codex 的团队：仓库里堆了一堆「好像能用」的提示词，没人说清目标、约束、和人必须批准什么。
+给谁：已经在用 Cursor / Claude Code / Codex，手里一堆「感觉能用」的提示词，但没人说过关没过关。
 
-**比现状好在哪。** 大多数公开 prompt 库是粘贴板。这里先过四道闸，再出厂：完整（目标 + 约束 + 格式）/ 可溯源 / 安全 / 至少一通。先写清边界，再自动化。
-
-| 下一步 | 链接 |
+| 直接去 | |
 | --- | --- |
-| 评测闸门 | [`eval/rubric.md`](eval/rubric.md) |
-| 官网 / 方法 | https://fxai.ai · https://fxai.ai/method/ |
-| SOP（方法论） | https://github.com/SmartStudio/enterprise-ai-sop |
-| 预约诊断 | https://fxai.ai/contact/ |
+| 四道闸 | [`eval/rubric.md`](eval/rubric.md) |
+| 方法 / 官网 | https://fxai.ai/method/ · https://fxai.ai |
+| 方法论 SOP | https://github.com/SmartStudio/enterprise-ai-sop |
 
-## Quick start
+## 怎么用
 
-1. 先读 [评测闸门](eval/rubric.md)。过不了闸的条目不会进本仓。
-2. 过闸之后按分类看 `prompts/<cat>/<slug>.md`，或升格后的 `skills/<name>/SKILL.md`。
-3. 复制到你的 Agent，或贴进对话。没有安装包。
+1. 先看闸门。过不了的不会出现在下面这些目录。
+2. 过闸的在 `prompts/<类>/<名字>.md`，升格过的在 `skills/<名字>/SKILL.md`。
+3. 复制走。没有安装包，没有「star 了就能用」。
 
-| 路径 | 出厂后放什么 |
+| 目录 | 出厂后放什么 |
 | --- | --- |
-| `eval/` | 闸门、模板。工厂本身。 |
+| `eval/` | 闸门。工厂本身。 |
 | `prompts/agent-coding/` | 编码 Agent：交接、编排、审计 |
-| `prompts/product-strategy/` | 产品策略 / 商业计划 |
-| `prompts/research-pkm/` | 研究与知识库维护 |
+| `prompts/product-strategy/` | 产品和商业计划 |
+| `prompts/research-pkm/` | 研究和知识库 |
 | `prompts/marketing-sales/` | 营销销售 |
 | `prompts/review/` | 评审验收 |
-| `skills/` | 评测后升格的可重复技能，每技能一个目录 + `SKILL.md` |
+| `skills/` | 过闸后再升格的技能，一目录一个 `SKILL.md` |
 
-每条出厂提示词最少四段：**用途 / 何时不用 / 边界（人必须批准什么） / 原文**。另附评测记录：来源、跑通日期、闸门逐条结果。不收客户名和密钥。
+每条出厂最少四段：**干嘛用 / 什么时候别用 / 人必须点头的事 / 原文**。再加一笔评测：在哪跑的、哪天、四闸各过没过。客户名和密钥一律不要。
 
-现在公开的是工厂骨架。第一条过闸条目随验收发布。
+现在是空车间。第一条过闸的提示词随验收入库。
 
 ## 品类句
 
-全渠道复用这一句，不另起：
+全渠道就这一句：
 
-白泽 Prompt 评测工厂——提示词过评测才出厂。
+白泽 Prompt 评测工厂——没跑过的，不出厂。
 
 ## License
 
-MIT. 品牌名「白泽明理」「Formal eXplainable AI」仍归 Baize Tech。
+MIT. 「白泽明理」「Formal eXplainable AI」是 Baize Tech 的品牌。

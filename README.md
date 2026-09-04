@@ -1,44 +1,45 @@
 # 白泽 Prompt 评测工厂
 
-**没跑过的，不出厂。**  
-**No eval, no ship.**
+**没跑过 = 不出厂。**  
+**no eval, no ship.**
 
-别的 prompt 库是粘贴板。这里是车间：过四道闸才上架。Inbox 里的半成品、截图、视频词、没跑通的，全部留下，不进这个仓。
+网上那堆 prompt 合集，十有八九是 Ctrl+C。这里不是合集，是车间：过闸才上架，没过的继续烂在 Inbox。
 
-给谁：已经在用 Cursor / Claude Code / Codex，手里一堆「感觉能用」的提示词，但没人说过关没过关。
+你要是已经在 Cursor / Claude Code / Codex 里堆了一地「感觉还行」的提示词，却说不清跑没跑通——就是给你们干的。
 
-| 直接去 | |
+| 点这 | |
 | --- | --- |
 | 四道闸 | [`eval/rubric.md`](eval/rubric.md) |
-| 方法 / 官网 | https://fxai.ai/method/ · https://fxai.ai |
-| 方法论 SOP | https://github.com/SmartStudio/enterprise-ai-sop |
+| 网站 | https://fxai.ai |
+| 方法页 | https://fxai.ai/method/ |
+| SOP 全文 | https://github.com/SmartStudio/enterprise-ai-sop |
 
-## 怎么用
+## 怎么玩
 
-1. 先看闸门。过不了的不会出现在下面这些目录。
-2. 过闸的在 `prompts/<类>/<名字>.md`，升格过的在 `skills/<名字>/SKILL.md`。
-3. 复制走。没有安装包，没有「star 了就能用」。
+1. 先看闸。过不了的，这个仓里不会有。
+2. 过了的在 `prompts/<类>/<名字>.md`；更稳的升到 `skills/<名字>/SKILL.md`。
+3. 复制走就行。别指望 star 一下 magically 装好。
 
-| 目录 | 出厂后放什么 |
+| 目录 | 干啥的 |
 | --- | --- |
-| `eval/` | 闸门。工厂本身。 |
-| `prompts/agent-coding/` | 编码 Agent：交接、编排、审计 |
+| `eval/` | 闸。工厂规矩。 |
+| `prompts/agent-coding/` | 写代码的 Agent：交接、编排、审计 |
 | `prompts/product-strategy/` | 产品和商业计划 |
 | `prompts/research-pkm/` | 研究和知识库 |
 | `prompts/marketing-sales/` | 营销销售 |
 | `prompts/review/` | 评审验收 |
-| `skills/` | 过闸后再升格的技能，一目录一个 `SKILL.md` |
+| `skills/` | 过闸再升格的技能，一夹一个 `SKILL.md` |
 
-每条出厂最少四段：**干嘛用 / 什么时候别用 / 人必须点头的事 / 原文**。再加一笔评测：在哪跑的、哪天、四闸各过没过。客户名和密钥一律不要。
+每条出厂最少四段：**干啥 / 别啥时候用 / 人必须点头啥 / 原文**。再贴一笔：在哪跑的、哪天、四闸过没过。客户名、密钥、糊墙图视频词——别扔进来。
 
-现在是空车间。第一条过闸的提示词随验收入库。
+现在车间是空的。第一条过闸的，验收完再上。
 
-## 品类句
+## 一句话
 
-全渠道就这一句：
+全渠道就这一句，别自己编：
 
-白泽 Prompt 评测工厂——没跑过的，不出厂。
+**白泽 Prompt 评测工厂——没跑过 = 不出厂。**
 
 ## License
 
-MIT. 「白泽明理」「Formal eXplainable AI」是 Baize Tech 的品牌。
+MIT. 「白泽明理」「Formal eXplainable AI」是 Baize Tech 的牌子。

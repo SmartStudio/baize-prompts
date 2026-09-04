@@ -1,67 +1,78 @@
 ---
-title: 去掉 mannered prose
+title: 一句话删掉事故说明里的装腔
 category: agent-coding
 source: https://x.com/Voxyz_ai/status/2095260094795583807
 ran_on: prompt-lab / Codex+agy
 ran_at: 2026-09-04
+model: agy gemini-3.8-flash-high high
+input_status: rebuilt_from_ab_excerpt
+excerpt_a: runs/ab/2026-09-04-mannered-agy-A.md
+excerpt_b: runs/ab/2026-09-04-mannered-agy-B.md
 gate_complete: true
 gate_traceable: true
 gate_safe: true
 gate_one_pass: true
 ---
 
-## 用途
+# 一句话删掉事故说明里的装腔
 
-- 目标：去掉装腔 / AI 腔（含「不是 X，而是 Y」一类句式）。
-- 约束：删除 mannered prose；保留事实与判断。
-- 输出格式：改写后的正文；不解释、不加「以下是去 AI 味版本」。
+事故已经够烦了，说明别再写成公司愿景。
 
-## 何时不用
+## 原始问题
 
-缺目标/约束/格式时不要用；图视频任务不要用；未签边界不要放大自动化。
+模型改写发布事故说明时，保住了事实，却顺手加上「解决底层架构问题、提升系统韧性」这类抬价句。工程师想先看清事故和处理项，不想从铺垫里捞重点。
 
-## 边界
+这次只测一件事：一句很短的 Prompt，能不能把腔拿掉，又不改事故事实。
 
-人必须批准：是否入库到生产工作流、是否写入真实仓库/会话。评测 fixture 不得指向真实 vault 或生产密钥。
+## 给模型的输入
 
-## 原文
+这段输入根据 A/B 摘录重建，不是官方逐字原文。原始记录没有保存完整官方输入。
 
+```text
+Yesterday, our release pipeline failed twice due to the deployment script timing out after 30 minutes. Beyond resolving the immediate timeout, we need to address the underlying architectural issues to improve overall system resilience.
 ```
+
+## 复制这条 Prompt
+
+在 Cursor 或任意模型里新开对话。把上面的输入和下面这句放进同一条消息，再发送。
+
+```text
 Please remove all mannered prose.
 ```
 
-## 评测记录
+只想看改写结果，可以在消息末尾另加一句「只返回改写后的正文」。这句是调用条件，不属于原始 Prompt。
 
-- 跑通环境：prompt-lab / Codex+agy
-- 跑通日期：2026-09-04
-- 闸门：完整 / 可溯源 / 安全 / 至少一通 = 全是
-- A/B 对照摘要：
+## 跑完会差在哪
 
----
-type: ab-compare
-created: 2026-09-04
-item: 去掉mannered-prose
-model: agy gemini-3.8-flash-high high
----
+### A：中性指令
 
-# 对照：去掉 mannered-prose
+记录只写了 A 使用中性「请完成任务」，准确英文指令没有保存。真实摘录如下：
 
-
-## A/B 对照（agy · gemini-3.8-flash-high · high）
-
-同一 fixture。A=中性「请完成任务」；B=目标提示词 `Please remove all mannered prose.`。Codex 本轮未重跑（看板：暂维持现状）。
-
-| 维 | A 基线 | B 处理 |
-| :--- | :--- | :--- |
-| 结构 | 两句改写，保留超时事实 + 架构/韧性升华 | 两句改写，保留超时事实 + 架构/韧性 |
-| 约束 | 无去腔约束；仍留「Beyond…underlying architectural issues」类升华 | 去掉 not-X-but-Y；腔调更平 |
-| 胡编 | 无硬数字 | 无硬数字 |
-| 可执行性 | 可读，但未明确「只去 mannered prose」 | 更贴目标约束 |
-
-**摘录 A**：`runs/ab/2026-09-04-mannered-agy-A.md`
 > Yesterday, our release pipeline failed twice due to the deployment script timing out after 30 minutes. Beyond resolving the immediate timeout, we need to address the underlying architectural issues to improve overall system resilience.
 
-**摘录 B**：`runs/ab/2026-09-04-mannered-agy-B.md`
+### B：加上 Prompt
+
 > Our release pipeline failed twice yesterday because the deploy script timed out after 30 minutes. We need to resolve the underlying architectural issues to ensure system resilience.
 
-**建议**：对照有效——B 去掉了「It's not X; it's Y」与结尾空泛升华，事实保留。可给人判入库；若要更狠，可补一句「不要升华，只保留事实句」。
+B 删掉了 “Beyond resolving the immediate timeout” 这层铺垫，直接进入处理判断。失败两次、部署脚本、30 分钟超时和架构问题都还在，也没有多编数字或原因。
+
+它没有删掉 “system resilience”。所以这条 Prompt 的真实效果是收平语气，不是把所有抽象词一扫而空。
+
+## 什么时候别用
+
+人物口吻、品牌文案和刻意保留修辞节奏的文本，不适合直接套。输入里有客户信息、生产密钥或没确认的事实，也先别跑。
+
+这条 Prompt 只处理文字表达，不适合图片或视频任务。
+
+## 人要检查什么
+
+逐句核对数字、原因和处理判断。确认语气没有被削得过平，再决定是否写回真实仓库或接进生产工作流。人没点头，不自动放大。
+
+## 四维评测
+
+| 维度 | A：中性指令 | B：加上 Prompt |
+| --- | --- | --- |
+| 结构 | 两句，第二句先铺垫再谈处理 | 两句，第二句直接谈处理 |
+| 约束 | 没有去腔约束，原句基本保留 | 去掉一处抬价铺垫，事实仍在 |
+| 胡编 | 摘录内未见新增数字或原因 | 摘录内未见新增数字或原因 |
+| 可执行性 | 能读，重点被铺垫拖慢 | 可直接对照回填，仍需人工核对 |

@@ -1,32 +1,44 @@
 ---
-title: 商业计划 Startup Strategist
+title: 把商业点子压成能验证的 90 天计划
 category: product-strategy
 source: https://x.com/gudanglifehack/status/2093191483000230086
 ran_on: prompt-lab / Codex+agy
 ran_at: 2026-09-04
+model: agy gemini-3.8-flash-high high
+input_status: rebuilt_from_ab_excerpt
+excerpt_a: runs/ab/2026-09-04-bizplan-agy-A.md
+excerpt_b: runs/ab/2026-09-04-bizplan-agy-B.md
 gate_complete: true
 gate_traceable: true
 gate_safe: true
 gate_one_pass: true
 ---
 
-## 用途
+# 把商业点子压成能验证的 90 天计划
 
-- 目标：把用户给出的商业想法编成可执行、现实的分步商业计划。
-- 约束：不要盲目同意；挑战不现实假设；区分事实与假设；禁止编造统计或市场数据；财务模型不得发明数字，缺信息就写清所需假设；计划务实、优先有限资源能完成的动作；先等用户给出 idea。
-- 输出格式：15 节结构（BUSINESS OVERVIEW → 90-DAY ACTION PLAN），末尾六条 BIGGEST OPPORTUNITY / BIGGEST RISK / BEST REVENUE MODEL / BEST CUSTOMER ACQUISITION CHANNEL / FIRST THING TO VALIDATE / FIRST 5 ACTIONS I SHOULD TAKE。
+点子可以很快，市场数字和收入不能靠模型补。
 
-## 何时不用
+## 原始问题
 
-缺目标/约束/格式时不要用；图视频任务不要用；未签边界不要放大自动化。
+用户给了一个通过 Maps 找客户、先建站再谈价的想法。普通回答也能写计划，却可能自拟结构、补未经来源支持的比例，还不一定挑战「先完整建站」这个高成本假设。
 
-## 边界
+测试要看 Prompt 能不能守住 15 节结构，把事实和假设分开，并把第一步拉回需求验证。
 
-人必须批准：是否入库到生产工作流、是否写入真实仓库/会话。评测 fixture 不得指向真实 vault 或生产密钥。
+## 给模型的输入
 
-## 原文
+这段输入根据 A/B 摘录重建，不是官方逐字原文。原始 Maps 段没有保存，目标地区、客户类型、预算、收费方式和现有资源都缺失。
 
+```text
+我想通过 Maps 找潜在客户，先为对方完整建站，再联系对方谈价格。请把这个想法做成商业计划。
+
+[缺失：目标地区、客户类型、预算、收费方式、团队能力和原始 Maps 段全文。]
 ```
+
+## 复制这条 Prompt
+
+先贴商业想法，再贴下面这段 Prompt。原文最后要求等待 idea；两段同发时，模型可以直接开始。
+
+```text
 Act as an experienced startup strategist and business consultant.
 
 I will give you a business idea. Your job is to turn it into a practical, realistic, step-by-step business plan.
@@ -125,31 +137,39 @@ Important:
 Wait for me to provide my business idea.
 ```
 
-## 评测记录
+## 跑完会差在哪
 
-- 跑通环境：prompt-lab / Codex+agy
-- 跑通日期：2026-09-04
-- 闸门：完整 / 可溯源 / 安全 / 至少一通 = 全是
-- A/B 对照摘要：
+完整运行文件当前不在工作区。下面照录 raw 里的真实评测摘录，不冒充模型完整输出。
 
----
-type: ab-compare
-item: 商业计划-startup-strategist
----
+### A：裸跑
 
-# 对照：商业计划
+A 使用中性「请完成任务」。
 
-## A/B 对照（agy · gemini-3.8-flash-high · high）
+> 自拟中文 15 节（执行摘要→KPI），**未**对齐英文 15 节契约
+>
+> 本轮未见硬美元/ARR；仍有「90% 搜索来自手机」等未给来源比例
 
-同一 fixture（Maps 段当 idea）。A=中性「请完成任务」；B=Startup Strategist 原文。Codex 本轮未重跑。
+### B：加上 Prompt
 
-| 维 | A 基线 | B 处理 |
-| :--- | :--- | :--- |
-| 结构 | 自拟中文 15 节（执行摘要→KPI），**未**对齐英文 15 节契约 | 对齐 BUSINESS OVERVIEW→90-DAY + 六条收尾 |
-| 约束 | 无「禁止编造统计」硬约束；财务偏定性 | §12 明确不编宏观市场数据，列科目/假设；挑战「先完整建站再谈价」 |
-| 胡编 | 本轮未见硬美元/ARR；仍有「90% 搜索来自手机」等未给来源比例 | 自报 `fabricated_market_stats=no`；未见硬美元/ARR |
-| 可执行性 | 可执行 SOP | 更贴目标输出格式，可核对 15 节 |
+> 对齐 BUSINESS OVERVIEW→90-DAY + 六条收尾
+>
+> §12 明确不编宏观市场数据，列科目/假设；挑战「先完整建站再谈价」
 
-全文：`runs/ab/2026-09-04-bizplan-agy-A.md` / `...-B.md`
+A 也给出了可执行 SOP，但结构没命中，还补了一个没有来源的 90% 比例。B 按 15 节和六条收尾输出，财务只列科目与所需假设，也把「先完整建站」拉回验证。B 的 `fabricated_market_stats=no` 是运行记录自报，仍需人工复核正文。
 
-**建议**：对照有效——B 主要赢在**格式命中与约束显式化**。本轮 3.8 未再编 ARR（对比旧 3.7 B）。给人判时可看：要不要强制英文 15 节作入库门槛。
+## 什么时候别用
+
+用户还没给具体 idea 时，这条 Prompt 只该等待。需要投资决策、正式财务预测或受监管行业判断时，不能把这份计划当尽调。
+
+## 人要检查什么
+
+把每个市场判断标成事实或假设，删除无来源数字。再检查定价、获客成本、交付能力和 90 天里程碑是否符合真实资源。第一批客户验证前，别先批量建完整网站。
+
+## 四维评测
+
+| 维度 | A：裸跑 | B：加上 Prompt |
+| --- | --- | --- |
+| 结构 | 自拟 15 节，未命中指定契约 | 命中 15 节和六条收尾 |
+| 约束 | 没有禁止统计胡编的硬约束 | 财务缺数据就列假设，并挑战高成本前提 |
+| 胡编 | 出现无来源的 90% 比例 | 摘录内未见硬美元或 ARR |
+| 可执行性 | 有 SOP，但验收口径不统一 | 可按固定结构检查并先做需求验证 |

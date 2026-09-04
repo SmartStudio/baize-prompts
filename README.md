@@ -9,7 +9,7 @@
 
 | 点这 | |
 | --- | --- |
-| 一眼对照 | 下面三组 · [`eval/examples/ab-showcase.md`](eval/examples/ab-showcase.md) |
+| 怎么写出厂文档 | [`docs/PROMPT_TEMPLATE.md`](docs/PROMPT_TEMPLATE.md) |
 | 四道闸 | [`eval/rubric.md`](eval/rubric.md) |
 | 网站 | https://fxai.ai |
 | 方法页 | https://fxai.ai/method/ |
@@ -17,69 +17,70 @@
 
 ## 一眼对照
 
-同一任务，不加提示词 vs 过闸提示词。感觉差在这，不在星数。
+先看同一任务出了什么问题，再看加 Prompt 后具体差在哪。
 
-### 1. 去掉装腔（mannered prose）
+### 1. 事故说明别再抬价
 
-任务：把一段发布事故说明写清楚。
+**问题**：发布流水线两次超时，模型保住了事实，却加了一层架构升华。
 
-| | 裸跑 | 过闸提示词 |
-| --- | --- | --- |
-| 结果 | 事实 + 「Beyond…architectural issues」升华 | 只留超时事实，腔拿掉 |
-| 摘录 | *Beyond resolving the immediate timeout, we need to address the underlying architectural issues to improve overall system resilience.* | *We need to resolve the underlying architectural issues to ensure system resilience.* |
+**输入**：同一段包含「失败两次、部署脚本、30 分钟超时」的事故说明。
 
-完整：[remove-mannered-prose](prompts/agent-coding/remove-mannered-prose.md) · [更多对照](eval/examples/ab-showcase.md)
+**A 裸跑**：保留 “Beyond resolving the immediate timeout” 这层铺垫。  
+**B 加 Prompt**：删掉铺垫，直接说处理架构问题。  
+**差在哪**：四个事故事实都还在，没有新编数字或原因，语气更平。
 
-### 2. 主 agent 只编排，别闷头改
+完整页：[`remove-mannered-prose.md`](prompts/agent-coding/remove-mannered-prose.md)
 
-任务：给 README 加一句简介。
+### 2. 主 agent 别越权实现
 
-| | 裸跑 | 过闸提示词 |
-| --- | --- | --- |
-| 行为 | **自己改完文件**再汇报 | 声明「我只编排」+ 派发清单，**不直接改** |
-| 差在哪 | 任务「完成」了，但越权 | 约束钉死：实现交给 subagent |
+**问题**：任务只是给 README 加一句简介，主 agent 直接改完文件，违反了只编排的角色约束。
 
-完整：[claude-md-fable-orchestrate-opus](prompts/agent-coding/claude-md-fable-orchestrate-opus.md)
+**输入**：同一句 README 修改任务。
 
-### 3. 会话交接：能不能直接开新会话
+**A 裸跑**：自己改文件，再汇报完成。  
+**B 加 Prompt**：说明自己只编排，给出派发清单，没有改 README。  
+**差在哪**：A 完成了任务却越权，B 把实现留给 subagent。
 
-| | 裸跑 | 过闸提示词 |
-| --- | --- | --- |
-| 输出 | 通用交接笔记 | 钉死 6 节 `SESSION_HANDOFF` + 降级启动词 |
-| 差在哪 | 能续，但缺「粘贴就能开」 | 可直接开新会话 |
+完整页：[`claude-md-fable-orchestrate-opus.md`](prompts/agent-coding/claude-md-fable-orchestrate-opus.md)
 
-完整：[codex-session-handoff](prompts/agent-coding/codex-session-handoff.md)
+### 3. 会话交接要能直接续
 
-还想看完整 A/B 表和摘录 → [`eval/examples/ab-showcase.md`](eval/examples/ab-showcase.md)
+**问题**：上下文太长要换会话，普通交接只写概况和待办，没留下可直接启动下一会话的内容。
 
+**输入**：同一个 scratch 会话迁移任务。
+
+**A 裸跑**：给通用交接笔记，没钉新会话命名和失败降级。  
+**B 加 Prompt**：固定交接结构，保留未提交改动，并给可粘贴启动词。  
+**差在哪**：A 还要人二次整理，B 可以核对现场后直接续开发。
+
+完整页：[`codex-session-handoff.md`](prompts/agent-coding/codex-session-handoff.md)
 
 ## 怎么玩
 
-1. 先看闸。过不了的，这个仓里不会有。
-2. 过了的在 `prompts/<类>/<名字>.md`；更稳的升到 `skills/<名字>/SKILL.md`。
-3. 复制走就行。别指望 star 一下 magically 装好。
+1. 打开任意出厂页：先读「原始问题」和「给模型的输入」，再复制 Prompt 自己跑。
+2. 对照「跑完会差在哪」。看不懂输入、对不上 A/B 的条目不该出现在这里。
+3. 要投稿，按 [`docs/PROMPT_TEMPLATE.md`](docs/PROMPT_TEMPLATE.md) 写。Inbox 半成品不公开。
 
 | 目录 | 干啥的 |
 | --- | --- |
-| `eval/` | 闸。工厂规矩。 |
-| `prompts/agent-coding/` | 写代码的 Agent：交接、编排、审计 |
+| `docs/` | 出厂文档规范 |
+| `eval/` | 闸门 |
+| `prompts/agent-coding/` | 写代码的 Agent |
 | `prompts/product-strategy/` | 产品和商业计划 |
 | `prompts/research-pkm/` | 研究和知识库 |
 | `prompts/marketing-sales/` | 营销销售 |
 | `prompts/review/` | 评审验收 |
-| `skills/` | 过闸再升格的技能，一夹一个 `SKILL.md` |
-
-每条出厂最少四段：**干啥 / 别啥时候用 / 人必须点头啥 / 原文**。再贴一笔：在哪跑的、哪天、四闸过没过。客户名、密钥、糊墙图视频词——别扔进来。
+| `skills/` | 过闸再升格的技能 |
 
 ## 已出厂（2026-09-04 首批）
 
-用户验收 + 四道闸 + A/B 对照后入库。Inbox 半成品不公开。
+用户验收 + 四道闸 + A/B 对照后入库。按 v3 读者路径重排。
 
 ### prompts
 
 | 类 | 文件 |
 | --- | --- |
-| agent-coding | [`codex-session-handoff`](prompts/agent-coding/codex-session-handoff.md) · [`claude-md-fable-orchestrate-opus`](prompts/agent-coding/claude-md-fable-orchestrate-opus.md) · [`workspace-audit-keep-remove`](prompts/agent-coding/workspace-audit-keep-remove.md) · [`codex-confidence-loop`](prompts/agent-coding/codex-confidence-loop.md) · [`remove-mannered-prose`](prompts/agent-coding/remove-mannered-prose.md) |
+| agent-coding | [`remove-mannered-prose`](prompts/agent-coding/remove-mannered-prose.md) · [`claude-md-fable-orchestrate-opus`](prompts/agent-coding/claude-md-fable-orchestrate-opus.md) · [`codex-session-handoff`](prompts/agent-coding/codex-session-handoff.md) · [`codex-confidence-loop`](prompts/agent-coding/codex-confidence-loop.md) · [`workspace-audit-keep-remove`](prompts/agent-coding/workspace-audit-keep-remove.md) |
 | product-strategy | [`startup-strategist-business-plan`](prompts/product-strategy/startup-strategist-business-plan.md) |
 | research-pkm | [`paper-rewrite-13-constraints`](prompts/research-pkm/paper-rewrite-13-constraints.md) |
 

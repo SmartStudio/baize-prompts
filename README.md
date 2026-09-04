@@ -32,7 +32,23 @@
 
 每条出厂最少四段：**干啥 / 别啥时候用 / 人必须点头啥 / 原文**。再贴一笔：在哪跑的、哪天、四闸过没过。客户名、密钥、糊墙图视频词——别扔进来。
 
-现在车间是空的。第一条过闸的，验收完再上。
+## 已出厂（2026-09-04 首批）
+
+用户验收 + 四道闸 + A/B 对照后入库。Inbox 半成品不公开。
+
+### prompts
+
+| 类 | 文件 |
+| --- | --- |
+| agent-coding | [`codex-session-handoff`](prompts/agent-coding/codex-session-handoff.md) · [`claude-md-fable-orchestrate-opus`](prompts/agent-coding/claude-md-fable-orchestrate-opus.md) · [`workspace-audit-keep-remove`](prompts/agent-coding/workspace-audit-keep-remove.md) · [`codex-confidence-loop`](prompts/agent-coding/codex-confidence-loop.md) · [`remove-mannered-prose`](prompts/agent-coding/remove-mannered-prose.md) |
+| product-strategy | [`startup-strategist-business-plan`](prompts/product-strategy/startup-strategist-business-plan.md) |
+| research-pkm | [`paper-rewrite-13-constraints`](prompts/research-pkm/paper-rewrite-13-constraints.md) |
+
+### skills（升格）
+
+- [`codex-session-handoff`](skills/codex-session-handoff/SKILL.md)
+- [`workspace-audit-keep-remove`](skills/workspace-audit-keep-remove/SKILL.md)
+- [`codex-confidence-loop`](skills/codex-confidence-loop/SKILL.md)
 
 ## 一句话
 

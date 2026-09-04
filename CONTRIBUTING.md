@@ -1,8 +1,10 @@
-# Contributing
+# 来砸 PR？
 
-This is a public prompt and skill library for enterprise AI work.
+可以。规矩就几条：
 
-- One prompt or one skill per PR
-- Each item must say: what it is for, when not to use it, and the boundary (what a human must approve)
-- No client names, keys, or vendor logins
-- Do not rewrite the category line
+- 一次 PR 一条提示词，或一个 Skill
+- 必须过 [`eval/rubric.md`](eval/rubric.md) 四道闸
+- 写清：干啥 / 别啥时候用 / 人必须点头啥
+- 别改品类句，别塞客户名和密钥
+
+没过闸的，开了也会被关。

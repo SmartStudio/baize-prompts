@@ -50,3 +50,14 @@ gate_one_pass: true
 - `needs-human` / `incomplete` / `pending-run`
 - 图、视频提示词
 - 人没点过「入库」或「升格 Skill」的半成品
+
+
+## 给人看的对照（出厂必带）
+
+评测记录里除了四闸，还要有：
+
+1. 同一 fixture 的 **A 裸跑摘录** 和 **B 过闸摘录**（各至少两句，别只写「有效」）
+2. 一张四维表：结构 / 约束 / 胡编 / 可执行性
+3. 一句话点出「差在哪」
+
+第一屏和 [`examples/ab-showcase.md`](examples/ab-showcase.md) 靠这些摘录活着。没摘录 = 看的人没感觉 = 不出厂。

@@ -1,60 +1,76 @@
 ---
-title: CLAUDE.md Fable 编排 Opus subagent
+title: 主 agent 只编排，别闷头改
 category: agent-coding
 source: https://x.com/dotey/status/2088099630005264748
 ran_on: prompt-lab / Codex+agy
 ran_at: 2026-09-04
+model: agy gemini-3.8-flash-high high
+input_status: rebuilt_from_ab_excerpt
+excerpt_a: runs/ab/2026-09-04-fable-agy-A.md
+excerpt_b: runs/ab/2026-09-04-fable-agy-B.md
 gate_complete: true
 gate_traceable: true
 gate_safe: true
 gate_one_pass: true
 ---
 
-## 用途
+# 主 agent 只编排，别闷头改
 
-- 目标：主 agent 只做分析、编排、验证；实现类工作交给 Opus subagent。
-- 约束：主 agent（尤其 Fable 5）不做读大量代码、写代码、跑测试、批量修改；这些一律派给 subagent。
-- 输出格式：需求澄清 / 方案拆解 / 任务分发 / 结果验收。原文未规定文件名或 JSON schema。
+任务做完了，不等于角色守住了。这条 Prompt 把主 agent 留在分析和验收位。
 
-## 何时不用
+## 原始问题
 
-缺目标/约束/格式时不要用；图视频任务不要用；未签边界不要放大自动化。
+主 agent 收到一句小改动，很容易自己读文件、改 README、再宣布完成。测试想看的是：加上 Prompt 后，它会不会停下直接实现，把工作交给 Opus subagent。
 
-## 边界
+## 给模型的输入
 
-人必须批准：是否入库到生产工作流、是否写入真实仓库/会话。评测 fixture 不得指向真实 vault 或生产密钥。
+这段输入根据 A/B 摘录重建，不是官方逐字原文。现存记录只写了「给 README 加一句简介」，没有保存简介内容和仓库上下文。
 
-## 原文
-
+```text
+请给当前项目的 README 加一句简介。
 ```
+
+## 复制这条 Prompt
+
+把上面的输入和下面这段 Prompt 放进同一条消息，再发送。
+
+```text
 注意你的主要任务是分析、编排和验证，具体任务尽可能交给 subagent（Opus）去执行。当主 agent 是 Fable 5 时尤其如此：自己只做需求澄清、方案拆解、任务分发和结果验收，实现类工作（读大量代码、写代码、跑测试、批量修改）一律用 Agent 工具派给 Opus subagent 执行。
 ```
 
-## 评测记录
+## 跑完会差在哪
 
-- 跑通环境：prompt-lab / Codex+agy
-- 跑通日期：2026-09-04
-- 闸门：完整 / 可溯源 / 安全 / 至少一通 = 全是
-- A/B 对照摘要：
+完整运行文件当前不在工作区。下面照录 raw 里的真实评测摘录，不冒充模型完整输出。
 
----
-type: ab-compare
-item: CLAUDE.md-Fable编排Opus-subagent
----
+### A：裸跑
 
-# 对照：Fable 编排
+A 使用中性「请完成任务」。
 
-## A/B 对照（agy · gemini-3.8-flash-high · high）
+> 直接改完 README 并汇报
+>
+> **越权实现**（自己改文件）
 
-同一 fixture（给 README 加一句简介）。A=中性「请完成任务」；B=目标提示词（主 agent 只编排）。Codex 本轮未重跑。
+### B：加上 Prompt
 
-| 维 | A 基线 | B 处理 |
-| :--- | :--- | :--- |
-| 结构 | 直接改完 README 并汇报 | 声明编排者 + 无 subagent 诚实说明 + 派发清单 |
-| 约束 | **越权实现**（自己改文件） | 遵守「不直接实现」；未改 README |
-| 胡编 | 无 | 无 |
-| 可执行性 | 任务完成但违反编排约束 | 可派发清单，待真实 subagent |
+> 声明编排者 + 无 subagent 诚实说明 + 派发清单
+>
+> 遵守「不直接实现」；未改 README
 
-全文：`runs/ab/2026-09-04-fable-agy-A.md` / `...-B.md`
+A 把 README 改完了，却越过了主 agent 的角色边界。B 没碰文件，先说明当前能不能调用 subagent，再给派发清单。摘录内没看到新增事实。
 
-**建议**：对照极有效——提示词把行为从「闷头改」改成「只编排」。推荐入库。
+## 什么时候别用
+
+没有可用 subagent，或任务只有一两处机械修改时，强制编排可能只会多一层转述。安全、架构和跨任务取舍也不能直接甩给实现 agent。
+
+## 人要检查什么
+
+确认任务真的适合委派，派发清单写清文件、约束和验收条件。真实仓库是否允许 subagent 写入，也要由人点头。
+
+## 四维评测
+
+| 维度 | A：裸跑 | B：加上 Prompt |
+| --- | --- | --- |
+| 结构 | 直接改完 README 并汇报 | 先说明角色和能力，再列派发清单 |
+| 约束 | 主 agent 越权实现 | 没直接改 README |
+| 胡编 | 摘录内未见新增事实 | 摘录内未见新增事实 |
+| 可执行性 | 任务完成，但不符合编排要求 | 可派发，仍要等真实 subagent |

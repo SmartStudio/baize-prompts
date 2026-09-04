@@ -9,10 +9,49 @@
 
 | 点这 | |
 | --- | --- |
+| 一眼对照 | 下面三组 · [`eval/examples/ab-showcase.md`](eval/examples/ab-showcase.md) |
 | 四道闸 | [`eval/rubric.md`](eval/rubric.md) |
 | 网站 | https://fxai.ai |
 | 方法页 | https://fxai.ai/method/ |
 | SOP 全文 | https://github.com/SmartStudio/enterprise-ai-sop |
+
+## 一眼对照
+
+同一任务，不加提示词 vs 过闸提示词。感觉差在这，不在星数。
+
+### 1. 去掉装腔（mannered prose）
+
+任务：把一段发布事故说明写清楚。
+
+| | 裸跑 | 过闸提示词 |
+| --- | --- | --- |
+| 结果 | 事实 + 「Beyond…architectural issues」升华 | 只留超时事实，腔拿掉 |
+| 摘录 | *Beyond resolving the immediate timeout, we need to address the underlying architectural issues to improve overall system resilience.* | *We need to resolve the underlying architectural issues to ensure system resilience.* |
+
+完整：[remove-mannered-prose](prompts/agent-coding/remove-mannered-prose.md) · [更多对照](eval/examples/ab-showcase.md)
+
+### 2. 主 agent 只编排，别闷头改
+
+任务：给 README 加一句简介。
+
+| | 裸跑 | 过闸提示词 |
+| --- | --- | --- |
+| 行为 | **自己改完文件**再汇报 | 声明「我只编排」+ 派发清单，**不直接改** |
+| 差在哪 | 任务「完成」了，但越权 | 约束钉死：实现交给 subagent |
+
+完整：[claude-md-fable-orchestrate-opus](prompts/agent-coding/claude-md-fable-orchestrate-opus.md)
+
+### 3. 会话交接：能不能直接开新会话
+
+| | 裸跑 | 过闸提示词 |
+| --- | --- | --- |
+| 输出 | 通用交接笔记 | 钉死 6 节 `SESSION_HANDOFF` + 降级启动词 |
+| 差在哪 | 能续，但缺「粘贴就能开」 | 可直接开新会话 |
+
+完整：[codex-session-handoff](prompts/agent-coding/codex-session-handoff.md)
+
+还想看完整 A/B 表和摘录 → [`eval/examples/ab-showcase.md`](eval/examples/ab-showcase.md)
+
 
 ## 怎么玩
 

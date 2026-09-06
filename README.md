@@ -90,6 +90,27 @@
 - [`workspace-audit-keep-remove`](skills/workspace-audit-keep-remove/SKILL.md)
 - [`codex-confidence-loop`](skills/codex-confidence-loop/SKILL.md)
 
+
+## 已出厂（2026-09-05 第二批）
+
+用户验收 11 条 Inbox A/B 后入库，按 v3 读者路径出厂。另开本 PR，不追加 #1。
+
+### prompts / agent-coding
+
+| 文件 | 一句话 |
+| --- | --- |
+| [`design-fragment-clarify`](prompts/agent-coding/design-fragment-clarify.md) | 碎碎念先多轮澄清，别闷头设计 |
+| [`codex-github-research-before-build`](prompts/agent-coding/codex-github-research-before-build.md) | GitHub 先调研再实现，确认前停 |
+| [`codex-pre-delivery-requirements`](prompts/agent-coding/codex-pre-delivery-requirements.md) | 交付前先出方案与验收清单 |
+| [`codex-repeated-work-to-skill`](prompts/agent-coding/codex-repeated-work-to-skill.md) | 重复工作先列候选再沉淀 Skill |
+| [`codex-dev-state-archive`](prompts/agent-coding/codex-dev-state-archive.md) | 根目录 DEV_STATE 可续跑 |
+| [`codex-long-session-closeout`](prompts/agent-coding/codex-long-session-closeout.md) | 长会话收尾三件套 |
+| [`codex-goal-template`](prompts/agent-coding/codex-goal-template.md) | 先落 GOAL.md 再实现 |
+| [`codex-task-contract`](prompts/agent-coding/codex-task-contract.md) | 任务契约五段可审 |
+| [`karpathy-pairing-constraints`](prompts/agent-coding/karpathy-pairing-constraints.md) | 冲突就停，不静默选边 |
+| [`codex-context-slim`](prompts/agent-coding/codex-context-slim.md) | 先裁上下文再审查 |
+| [`codex-goal-scenario-pack`](prompts/agent-coding/codex-goal-scenario-pack.md) | Goal 场景扩展包（部分场景未全测） |
+
 ## 一句话
 
 全渠道就这一句，别自己编：

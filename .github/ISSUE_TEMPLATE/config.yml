@@ -1,0 +1,5 @@
+blank_issues_enabled: false
+contact_links:
+  - name: Factory template
+    url: https://github.com/SmartStudio/baize-prompts/blob/main/docs/PROMPT_TEMPLATE.md
+    about: How to write a shippable factory page

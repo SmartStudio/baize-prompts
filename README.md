@@ -70,6 +70,7 @@
 | `prompts/research-pkm/` | 研究和知识库 |
 | `prompts/marketing-sales/` | 营销销售 |
 | `prompts/review/` | 评审验收 |
+| `prompts/image-gen/` | 出图提示词（评测成图内嵌） |
 | `skills/` | 过闸再升格的技能 |
 
 ## 已出厂（2026-09-04 首批）
@@ -110,6 +111,26 @@
 | [`karpathy-pairing-constraints`](prompts/agent-coding/karpathy-pairing-constraints.md) | 冲突就停，不静默选边 |
 | [`codex-context-slim`](prompts/agent-coding/codex-context-slim.md) | 先裁上下文再审查 |
 | [`codex-goal-scenario-pack`](prompts/agent-coding/codex-goal-scenario-pack.md) | Goal 场景扩展包（部分场景未全测） |
+
+## 已出厂（2026-09-14 图片批）
+
+图片线 ×11：每页 = 清理后的评测报告，**内嵌评测成图**（synthetic 含 MAIN-synthetic + B）。**没跑过 = 不出厂。**
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`GPTImage25-龙武士草原对峙`](prompts/image-gen/GPTImage25-龙武士草原对峙.md) | official |
+| [`GPTImage-像素RPG百物网格`](prompts/image-gen/GPTImage-像素RPG百物网格.md) | official |
+| [`GPTImage2-品牌全息乙烯贴纸`](prompts/image-gen/GPTImage2-品牌全息乙烯贴纸.md) | official |
+| [`GPTImage-品牌硬珐琅徽章`](prompts/image-gen/GPTImage-品牌硬珐琅徽章.md) | official |
+| [`GPTImage-国家极简旅行编辑插画`](prompts/image-gen/GPTImage-国家极简旅行编辑插画.md) | official |
+| [`GPTImage25-手作微缩旅行场景`](prompts/image-gen/GPTImage25-手作微缩旅行场景.md) | official |
+| [`GPTImage-超现实金属方块肖像-JSON`](prompts/image-gen/GPTImage-超现实金属方块肖像-JSON.md) | official |
+| [`GPTImage2-照片加极简墨线vignette`](prompts/image-gen/GPTImage2-照片加极简墨线vignette.md) | synthetic_codex |
+| [`GPTImage2-对半编辑艺术海报`](prompts/image-gen/GPTImage2-对半编辑艺术海报.md) | synthetic_codex |
+| [`GPTImage2-海港旅行手帐海报`](prompts/image-gen/GPTImage2-海港旅行手帐海报.md) | synthetic_codex |
+| [`GPTImage25-Line表情包序列帧`](prompts/image-gen/GPTImage25-Line表情包序列帧.md) | synthetic_codex |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 ## 一句话
 

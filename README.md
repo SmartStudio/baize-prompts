@@ -132,6 +132,22 @@
 
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
+## 已出厂（2026-09-15 图片批 batch5×6）
+
+图片线 batch5 ×6：每页 = 清理后的评测报告，**内嵌评测成图**（八零年代 synthetic 含 MAIN-synthetic + B）。**没跑过 = 不出厂。**
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`GPTImage2-日系街道海军线稿`](prompts/image-gen/GPTImage2-日系街道海军线稿.md) | official |
+| [`GPTImage25-八零年代复古人像`](prompts/image-gen/GPTImage25-八零年代复古人像.md) | synthetic_codex |
+| [`GPTImage25-橙板牛仔帽时尚海报`](prompts/image-gen/GPTImage25-橙板牛仔帽时尚海报.md) | official |
+| [`GPTImage2-360等距柱状全景`](prompts/image-gen/GPTImage2-360等距柱状全景.md) | official |
+| [`GPTImage2-等距国家微缩沙盘`](prompts/image-gen/GPTImage2-等距国家微缩沙盘.md) | official |
+| [`GPTImage2-等距动漫世界地图沙盘`](prompts/image-gen/GPTImage2-等距动漫世界地图沙盘.md) | official |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

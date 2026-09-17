@@ -148,6 +148,30 @@
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 
+## 已出厂（2026-09-17 批）
+
+agent-coding ×3 + image-gen ×4。文本按 v3 读者路径出厂；图片线每页 = 清理后的评测报告，**内嵌评测成图**（像素变身 synthetic 含 MAIN + B）。**没跑过 = 不出厂。**
+
+### prompts / agent-coding
+
+| 文件 | 一句话 |
+| --- | --- |
+| [`Codex-技能插件中文化整理-RealYDT`](prompts/agent-coding/Codex-技能插件中文化整理-RealYDT.md) | 扫本地技能/插件英文显示改中文，缺 openai.yaml 也补 |
+| [`Codex-Astra编排控成本-umbrella`](prompts/agent-coding/Codex-Astra编排控成本-umbrella.md) | 事件等待 + Luna 委派，停掉分钟级心跳 |
+| [`Codex-长对话上下文清理摘要-goan`](prompts/agent-coding/Codex-长对话上下文清理摘要-goan.md) | 长会话清成六段可续跑摘要 |
+
+### prompts / image-gen
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`GPTImage25-列车乘务员3x3抓拍拼贴`](prompts/image-gen/GPTImage25-列车乘务员3x3抓拍拼贴.md) | official |
+| [`GPTImage25-像素变身SpriteSheet5x6`](prompts/image-gen/GPTImage25-像素变身SpriteSheet5x6.md) | synthetic_codex |
+| [`GPTImage25-行星级汉服巨人模板`](prompts/image-gen/GPTImage25-行星级汉服巨人模板.md) | official |
+| [`GPTImage25-粘土小火龙定格36帧`](prompts/image-gen/GPTImage25-粘土小火龙定格36帧.md) | official |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

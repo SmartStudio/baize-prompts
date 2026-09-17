@@ -1,14 +1,14 @@
 ---
 type: index
 created: 2026-09-14
-updated: 2026-09-15
+updated: 2026-09-17
 category: image-gen
 tags: [image-gen, index, baize-prompts]
 ---
 
 # image-gen · 出图提示词
 
-> 已验收 **17** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
+> 已验收 **21** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
 
 ## 出厂页（每页内嵌评测成图）
 
@@ -31,6 +31,10 @@ tags: [image-gen, index, baize-prompts]
 | [`GPTImage2-360等距柱状全景`](GPTImage2-360等距柱状全景.md) | `official` | page embeds eval image(s) |
 | [`GPTImage2-等距国家微缩沙盘`](GPTImage2-等距国家微缩沙盘.md) | `official` | page embeds eval image(s) |
 | [`GPTImage2-等距动漫世界地图沙盘`](GPTImage2-等距动漫世界地图沙盘.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-列车乘务员3x3抓拍拼贴`](GPTImage25-列车乘务员3x3抓拍拼贴.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-像素变身SpriteSheet5x6`](GPTImage25-像素变身SpriteSheet5x6.md) | `synthetic_codex` | page embeds eval image(s) |
+| [`GPTImage25-行星级汉服巨人模板`](GPTImage25-行星级汉服巨人模板.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-粘土小火龙定格36帧`](GPTImage25-粘土小火龙定格36帧.md) | `official` | page embeds eval image(s) |
 
 ## 成图目录
 

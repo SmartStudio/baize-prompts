@@ -172,6 +172,21 @@ agent-coding ×3 + image-gen ×4。文本按 v3 读者路径出厂；图片线�
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 
+## 已出厂（2026-09-18 batch9×5）
+
+图片线 batch9 ×5：每页 = 清理后的评测报告，**内嵌评测成图**（摩托水彩 / 纽约雨天 synthetic 含 MAIN-synthetic + B）。**没跑过 = 不出厂。**
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`GPTImage25-海崖修道院旅行抓拍肖像`](prompts/image-gen/GPTImage25-海崖修道院旅行抓拍肖像.md) | official |
+| [`GPTImage25-摩托水彩旅行手帐插画`](prompts/image-gen/GPTImage25-摩托水彩旅行手帐插画.md) | synthetic_codex |
+| [`GPTImage25-纽约雨天水彩人像`](prompts/image-gen/GPTImage25-纽约雨天水彩人像.md) | synthetic_codex |
+| [`GPTImage25-东方禅意极简封面海报`](prompts/image-gen/GPTImage25-东方禅意极简封面海报.md) | official |
+| [`GPTImage25-城市丝网旅行海报`](prompts/image-gen/GPTImage25-城市丝网旅行海报.md) | official |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

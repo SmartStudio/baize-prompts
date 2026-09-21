@@ -187,6 +187,21 @@ agent-coding ×3 + image-gen ×4。文本按 v3 读者路径出厂；图片线�
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 
+## 已出厂（2026-09-21 batch10×5）
+
+图片线 batch10 ×5：每页 = 清理后的评测报告，**内嵌评测成图**（蓝底棚拍 synthetic 含 MAIN-synthetic + B）。**没跑过 = 不出厂。**
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`GPTImage25-八零年代葡萄牙海滩写真`](prompts/image-gen/GPTImage25-八零年代葡萄牙海滩写真.md) | official |
+| [`GPTImage25-蓝底棚拍时尚换人肖像`](prompts/image-gen/GPTImage25-蓝底棚拍时尚换人肖像.md) | synthetic_codex |
+| [`GPTImage25-地点旅行扁平海报`](prompts/image-gen/GPTImage25-地点旅行扁平海报.md) | official |
+| [`GPTImage25-地标迷你3D立体模型`](prompts/image-gen/GPTImage25-地标迷你3D立体模型.md) | official |
+| [`GPTImage25-日系街拍杂志封面时尚海报`](prompts/image-gen/GPTImage25-日系街拍杂志封面时尚海报.md) | official |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

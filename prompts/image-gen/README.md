@@ -1,14 +1,14 @@
 ---
 type: index
 created: 2026-09-14
-updated: 2026-09-18
+updated: 2026-09-21
 category: image-gen
 tags: [image-gen, index, baize-prompts]
 ---
 
 # image-gen · 出图提示词
 
-> 已验收 **26** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
+> 已验收 **31** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
 
 ## 出厂页（每页内嵌评测成图）
 
@@ -40,6 +40,11 @@ tags: [image-gen, index, baize-prompts]
 | [`GPTImage25-纽约雨天水彩人像`](GPTImage25-纽约雨天水彩人像.md) | `synthetic_codex` | page embeds eval image(s) |
 | [`GPTImage25-东方禅意极简封面海报`](GPTImage25-东方禅意极简封面海报.md) | `official` | page embeds eval image(s) |
 | [`GPTImage25-城市丝网旅行海报`](GPTImage25-城市丝网旅行海报.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-八零年代葡萄牙海滩写真`](GPTImage25-八零年代葡萄牙海滩写真.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-蓝底棚拍时尚换人肖像`](GPTImage25-蓝底棚拍时尚换人肖像.md) | `synthetic_codex` | page embeds eval image(s) |
+| [`GPTImage25-地点旅行扁平海报`](GPTImage25-地点旅行扁平海报.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-地标迷你3D立体模型`](GPTImage25-地标迷你3D立体模型.md) | `official` | page embeds eval image(s) |
+| [`GPTImage25-日系街拍杂志封面时尚海报`](GPTImage25-日系街拍杂志封面时尚海报.md) | `official` | page embeds eval image(s) |
 
 ## 成图目录
 

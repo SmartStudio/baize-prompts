@@ -202,6 +202,30 @@ agent-coding ×3 + image-gen ×4。文本按 v3 读者路径出厂；图片线�
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 
+## 已出厂（2026-10-21 图片批 ×14）
+
+图片线 ×14：每页 = 清理后的评测报告，**内嵌评测成图**（Codex B 成图）。**没跑过 = 不出厂。**
+
+| 文件 | fixture_source |
+| --- | --- |
+| [`MJ-少年动作帧导演系统提示-IamEmily2050`](prompts/image-gen/MJ-少年动作帧导演系统提示-IamEmily2050.md) | official |
+| [`MJ-思想成句前的透明生物暗场显微-Ror_Fly`](prompts/image-gen/MJ-思想成句前的透明生物暗场显微-Ror_Fly.md) | official |
+| [`NanoBanana-人像摄影导演系统提示-IamEmily2050`](prompts/image-gen/NanoBanana-人像摄影导演系统提示-IamEmily2050.md) | official |
+| [`图像-冰块包裹护肤品商业静物-0xbisc`](prompts/image-gen/图像-冰块包裹护肤品商业静物-0xbisc.md) | official |
+| [`图像-厚涂刮刀枫树湖景油画-churvikv`](prompts/image-gen/图像-厚涂刮刀枫树湖景油画-churvikv.md) | official |
+| [`图像-厨房剖面图纸到成品过渡-PatriciaCoelhoV`](prompts/image-gen/图像-厨房剖面图纸到成品过渡-PatriciaCoelhoV.md) | official |
+| [`图像-参数方程抽象喷绘分形-icreatelife`](prompts/image-gen/图像-参数方程抽象喷绘分形-icreatelife.md) | official |
+| [`图像-发光彩石老城街夜景一点透视-churvikv`](prompts/image-gen/图像-发光彩石老城街夜景一点透视-churvikv.md) | official |
+| [`图像-哥特卡通角色插画占位模板-azed_ai`](prompts/image-gen/图像-哥特卡通角色插画占位模板-azed_ai.md) | official |
+| [`图像-废铁机甲冒险者3D渲染模板-azed_ai`](prompts/image-gen/图像-废铁机甲冒险者3D渲染模板-azed_ai.md) | official |
+| [`图像-提拉米苏白底餐饮摄影-HeyRu0by`](prompts/image-gen/图像-提拉米苏白底餐饮摄影-HeyRu0by.md) | official |
+| [`图像-深色木椅低机位棚拍-AiwithAlyar`](prompts/image-gen/图像-深色木椅低机位棚拍-AiwithAlyar.md) | official |
+| [`图像-等距微缩世界占位模板-azed_ai`](prompts/image-gen/图像-等距微缩世界占位模板-azed_ai.md) | official |
+| [`图像-纸雕浮雕湖畔小屋全景-churvikv`](prompts/image-gen/图像-纸雕浮雕湖畔小屋全景-churvikv.md) | official |
+
+索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

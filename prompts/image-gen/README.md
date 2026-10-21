@@ -1,14 +1,14 @@
 ---
 type: index
 created: 2026-09-14
-updated: 2026-09-21
+updated: 2026-10-21
 category: image-gen
 tags: [image-gen, index, baize-prompts]
 ---
 
 # image-gen · 出图提示词
 
-> 已验收 **31** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
+> 已验收 **45** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
 
 ## 出厂页（每页内嵌评测成图）
 
@@ -45,6 +45,20 @@ tags: [image-gen, index, baize-prompts]
 | [`GPTImage25-地点旅行扁平海报`](GPTImage25-地点旅行扁平海报.md) | `official` | page embeds eval image(s) |
 | [`GPTImage25-地标迷你3D立体模型`](GPTImage25-地标迷你3D立体模型.md) | `official` | page embeds eval image(s) |
 | [`GPTImage25-日系街拍杂志封面时尚海报`](GPTImage25-日系街拍杂志封面时尚海报.md) | `official` | page embeds eval image(s) |
+| [`MJ-少年动作帧导演系统提示-IamEmily2050`](MJ-少年动作帧导演系统提示-IamEmily2050.md) | `official` | page embeds eval image(s) |
+| [`MJ-思想成句前的透明生物暗场显微-Ror_Fly`](MJ-思想成句前的透明生物暗场显微-Ror_Fly.md) | `official` | page embeds eval image(s) |
+| [`NanoBanana-人像摄影导演系统提示-IamEmily2050`](NanoBanana-人像摄影导演系统提示-IamEmily2050.md) | `official` | page embeds eval image(s) |
+| [`图像-冰块包裹护肤品商业静物-0xbisc`](图像-冰块包裹护肤品商业静物-0xbisc.md) | `official` | page embeds eval image(s) |
+| [`图像-厚涂刮刀枫树湖景油画-churvikv`](图像-厚涂刮刀枫树湖景油画-churvikv.md) | `official` | page embeds eval image(s) |
+| [`图像-厨房剖面图纸到成品过渡-PatriciaCoelhoV`](图像-厨房剖面图纸到成品过渡-PatriciaCoelhoV.md) | `official` | page embeds eval image(s) |
+| [`图像-参数方程抽象喷绘分形-icreatelife`](图像-参数方程抽象喷绘分形-icreatelife.md) | `official` | page embeds eval image(s) |
+| [`图像-发光彩石老城街夜景一点透视-churvikv`](图像-发光彩石老城街夜景一点透视-churvikv.md) | `official` | page embeds eval image(s) |
+| [`图像-哥特卡通角色插画占位模板-azed_ai`](图像-哥特卡通角色插画占位模板-azed_ai.md) | `official` | page embeds eval image(s) |
+| [`图像-废铁机甲冒险者3D渲染模板-azed_ai`](图像-废铁机甲冒险者3D渲染模板-azed_ai.md) | `official` | page embeds eval image(s) |
+| [`图像-提拉米苏白底餐饮摄影-HeyRu0by`](图像-提拉米苏白底餐饮摄影-HeyRu0by.md) | `official` | page embeds eval image(s) |
+| [`图像-深色木椅低机位棚拍-AiwithAlyar`](图像-深色木椅低机位棚拍-AiwithAlyar.md) | `official` | page embeds eval image(s) |
+| [`图像-等距微缩世界占位模板-azed_ai`](图像-等距微缩世界占位模板-azed_ai.md) | `official` | page embeds eval image(s) |
+| [`图像-纸雕浮雕湖畔小屋全景-churvikv`](图像-纸雕浮雕湖畔小屋全景-churvikv.md) | `official` | page embeds eval image(s) |
 
 ## 成图目录
 

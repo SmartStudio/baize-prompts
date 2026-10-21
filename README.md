@@ -279,6 +279,20 @@ agent-coding ×4、marketing-sales ×10、product-strategy ×10、research-pkm �
 | [`文本-逐题追问式图像提示生成器-eptwts`](prompts/image-gen/文本-逐题追问式图像提示生成器-eptwts.md) | `image-gen` |
 
 
+## 已出厂（2026-10-21 文本补批 ×6，仅 Codex）
+
+marketing-sales ×2、product-strategy ×1、eval-review ×1、audio ×1、image-gen ×1。按「Codex 单次通过即收」出厂：**仅 Codex，没有 A/B 对照**；其中 3 条带软项，页内已写明；图片线 1 条为文本型提示，成图不适用。
+
+| 文件 | 分类 |
+| --- | --- |
+| [`文本-领英个人品牌毒舌诊断与30天计划-omoalhajaabiola`](prompts/marketing-sales/文本-领英个人品牌毒舌诊断与30天计划-omoalhajaabiola.md) | `marketing-sales` |
+| [`领域-外呼历史反推信号提升率-chrispisarski`](prompts/marketing-sales/领域-外呼历史反推信号提升率-chrispisarski.md) | `marketing-sales` |
+| [`文本-静音十秒爆点功能挖掘-david_attisaas`](prompts/product-strategy/文本-静音十秒爆点功能挖掘-david_attisaas.md) | `product-strategy` |
+| [`领域-创业公司合同风险扫描-mattshumer_`](prompts/eval-review/领域-创业公司合同风险扫描-mattshumer_.md) | `eval-review` |
+| [`语音-Suno短视频背景歌段落标签模板-OlatundeAI`](prompts/audio/语音-Suno短视频背景歌段落标签模板-OlatundeAI.md) | `audio` |
+| [`文本-黑漆螺钿虚构文明图像提示导演-IamEmily2050`](prompts/image-gen/文本-黑漆螺钿虚构文明图像提示导演-IamEmily2050.md) | `image-gen` |
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

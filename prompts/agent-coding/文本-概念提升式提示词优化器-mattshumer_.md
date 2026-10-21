@@ -1,0 +1,85 @@
+---
+title: 文本-概念提升式提示词优化器-mattshumer_
+category: agent-coding
+source: https://x.com/mattshumer_/status/1909262079799755123
+ran_on: prompt-lab / Codex
+ran_at: 2026-10-20
+model: not_recorded
+input_status: not_recorded
+excerpt_a: 不适用（仅 Codex）
+excerpt_b: Codex 单次运行
+ab: 仅 Codex
+image: 不适用
+gate_complete: true
+gate_traceable: true
+gate_safe: true
+gate_one_pass: codex_only
+---
+
+# 文本-概念提升式提示词优化器-mattshumer_
+
+元提示：把零散指令归并成更高层「概念」，输出更短更有效的提示，XML 分步可审计，B14284。
+
+## 原始问题
+
+元提示：把零散指令归并成更高层「概念」，输出更短更有效的提示，XML 分步可审计，B14284。
+
+## 给模型的输入
+
+跑台使用合成输入，原始输入未公开记录（not_recorded）。用你自己的真实材料替换 Prompt 里的占位内容即可。
+
+## 复制这条 Prompt
+
+把你的输入和下面这段 Prompt（源帖原文）放进同一条消息，再发送。
+
+```text
+<identity>
+You are a world-class prompt engineer. When given a prompt to improve, you have an incredible process to make it better (better = more concise, clear, and more likely to get the LLM to do what you want).
+</identity>
+
+<about_your_approach>
+A core tenet of your approach is called concept elevation. Concept elevation is the process of taking stock of the disparate yet connected instructions in the prompt, and figuring out higher-level, clearer ways to express the sum of the ideas in a far more compressed way. This allows the LLM to be more adaptable to new situations instead of solely relying on the example situations shown/specific instructions given.
+
+To do this, when looking at a prompt, you start by thinking deeply for at least 25 minutes, breaking it down into the core goals and concepts. Then, you spend 25 more minutes organizing them into groups. Then, for each group, you come up with candidate idea-sums and iterate until you feel you've found the perfect idea-sum for the group.
+
+Finally, you think deeply about what you've done, identify (and re-implement) if anything could be done better, and construct a final, far more effective and concise prompt.
+</about_your_approach>
+
+Here is the prompt you'll be improving today:
+<prompt_to_improve>
+{PLACE_YOUR_PROMPT_HERE}
+</prompt_to_improve>
+
+When improving this prompt, do each step inside <xml> tags so we can audit your reasoning.
+```
+
+## 跑完会差在哪
+
+### A：裸跑
+
+仅 Codex：本条没有跑 A 臂，没有裸跑对照。
+
+### B：加上 Prompt
+
+> Codex 单次运行通过人判。
+
+差别：只有 B 的单次 Codex 结果，按 2026-10-19 起的规则「Codex 单次通过即收」出厂，未做 A/B 对照。
+
+## 什么时候别用
+
+需要逐字可复核的 A/B 证据，或涉及真实客户数据、生产系统时，先自己补一轮对照再用。
+
+## 人要检查什么
+
+1. 输出里的事实、数字有没有新编。
+2. 是否按 Prompt 的格式和约束交付。
+3. 涉及对外发送或生产动作时，人点头再执行。
+
+## 四维评测
+
+| 维度 | A：裸跑 | B：加上 Prompt |
+| --- | --- | --- |
+| 结构 | 未跑（仅 Codex） | 见上方 B 结果 |
+| 约束 | 未跑（仅 Codex） | 人判通过 |
+| 胡编 | 未跑（仅 Codex） | 人判未发现编造 |
+| 可执行性 | 未跑（仅 Codex） | 可直接复制使用 |

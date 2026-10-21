@@ -8,7 +8,7 @@ tags: [image-gen, index, baize-prompts]
 
 # image-gen · 出图提示词
 
-> 已验收 **45** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
+> 已验收 **48** 条。开源 baize-prompts 图片线必须带 **评测报告**（内嵌成图；synthetic 须 MAIN-ref + B 双嵌）。**没跑过 = 不出厂。**
 
 ## 出厂页（每页内嵌评测成图）
 
@@ -59,6 +59,9 @@ tags: [image-gen, index, baize-prompts]
 | [`图像-深色木椅低机位棚拍-AiwithAlyar`](图像-深色木椅低机位棚拍-AiwithAlyar.md) | `official` | page embeds eval image(s) |
 | [`图像-等距微缩世界占位模板-azed_ai`](图像-等距微缩世界占位模板-azed_ai.md) | `official` | page embeds eval image(s) |
 | [`图像-纸雕浮雕湖畔小屋全景-churvikv`](图像-纸雕浮雕湖畔小屋全景-churvikv.md) | `official` | page embeds eval image(s) |
+| [`文本-原相机选角写实图像提示改写器-IamEmily2050`](文本-原相机选角写实图像提示改写器-IamEmily2050.md) | `仅 Codex` | 文本型提示，成图不适用 |
+| [`文本-末日都市科幻双模型图像提示导演-IamEmily2050`](文本-末日都市科幻双模型图像提示导演-IamEmily2050.md) | `仅 Codex` | 文本型提示，成图不适用 |
+| [`文本-逐题追问式图像提示生成器-eptwts`](文本-逐题追问式图像提示生成器-eptwts.md) | `仅 Codex` | 文本型提示，成图不适用 |
 
 ## 成图目录
 

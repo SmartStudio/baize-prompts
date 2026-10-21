@@ -226,6 +226,59 @@ agent-coding ×3 + image-gen ×4。文本按 v3 读者路径出厂；图片线�
 索引：[`prompts/image-gen/README.md`](prompts/image-gen/README.md)
 
 
+## 已出厂（2026-10-21 文本批 ×45，仅 Codex）
+
+agent-coding ×4、marketing-sales ×10、product-strategy ×10、research-pkm ×7、eval-review ×4、writing ×1、audio ×5、other ×1、image-gen ×3。本批按「Codex 单次通过即收」出厂：**仅 Codex，没有 A/B 对照**；图片线的 3 条为文本型提示，成图不适用。
+
+| 文件 | 分类 |
+| --- | --- |
+| [`文本-三种代理SOUL身份模板-IBuzovskyi`](prompts/agent-coding/文本-三种代理SOUL身份模板-IBuzovskyi.md) | `agent-coding` |
+| [`文本-创意总监五问拷问协议-IamEmily2050`](prompts/agent-coding/文本-创意总监五问拷问协议-IamEmily2050.md) | `agent-coding` |
+| [`文本-概念提升式提示词优化器-mattshumer_`](prompts/agent-coding/文本-概念提升式提示词优化器-mattshumer_.md) | `agent-coding` |
+| [`文本-逐题访谈生成规格书-svpino`](prompts/agent-coding/文本-逐题访谈生成规格书-svpino.md) | `agent-coding` |
+| [`B2B-客诉评论转异议广告角度表-SarahLevinger`](prompts/marketing-sales/B2B-客诉评论转异议广告角度表-SarahLevinger.md) | `marketing-sales` |
+| [`外贸-工厂报价单逐行查隐藏成本-ecommilan`](prompts/marketing-sales/外贸-工厂报价单逐行查隐藏成本-ecommilan.md) | `marketing-sales` |
+| [`文本-客户原话转创意情报报告七信号-adamtaylorl`](prompts/marketing-sales/文本-客户原话转创意情报报告七信号-adamtaylorl.md) | `marketing-sales` |
+| [`文本-电商欢迎邮件序列十条规则审计-ecomchasedimond`](prompts/marketing-sales/文本-电商欢迎邮件序列十条规则审计-ecomchasedimond.md) | `marketing-sales` |
+| [`领域-五类买家模拟落地页流失点-free_ai_guides`](prompts/marketing-sales/领域-五类买家模拟落地页流失点-free_ai_guides.md) | `marketing-sales` |
+| [`领域-五阶段销售漏斗架构师-alex_prompter`](prompts/marketing-sales/领域-五阶段销售漏斗架构师-alex_prompter.md) | `marketing-sales` |
+| [`领域-公司自动调研画像与竞品表-alex_verem`](prompts/marketing-sales/领域-公司自动调研画像与竞品表-alex_verem.md) | `marketing-sales` |
+| [`领域-销售会前简报每日例程-chrispisarski`](prompts/marketing-sales/领域-销售会前简报每日例程-chrispisarski.md) | `marketing-sales` |
+| [`领域-销售岗面试前公司情报简报-FidelCacheFlow`](prompts/marketing-sales/领域-销售岗面试前公司情报简报-FidelCacheFlow.md) | `marketing-sales` |
+| [`领域-销售通话转录自建销售运营大脑-termsheetinator`](prompts/marketing-sales/领域-销售通话转录自建销售运营大脑-termsheetinator.md) | `marketing-sales` |
+| [`文本-一人公司十万美元蓝图-sentient_agency`](prompts/product-strategy/文本-一人公司十万美元蓝图-sentient_agency.md) | `product-strategy` |
+| [`文本-一人公司教练提问式辅导-DanKulkov`](prompts/product-strategy/文本-一人公司教练提问式辅导-DanKulkov.md) | `product-strategy` |
+| [`文本-两面神思维破假二选一-free_ai_guides`](prompts/product-strategy/文本-两面神思维破假二选一-free_ai_guides.md) | `product-strategy` |
+| [`文本-毒舌顾问全盘诊断盲点-omoalhajaabiola`](prompts/product-strategy/文本-毒舌顾问全盘诊断盲点-omoalhajaabiola.md) | `product-strategy` |
+| [`文本-聊天记录挖掘三个登月项目-IamEmily2050`](prompts/product-strategy/文本-聊天记录挖掘三个登月项目-IamEmily2050.md) | `product-strategy` |
+| [`文本-长报告转十分钟幻灯片-alex_prompter`](prompts/product-strategy/文本-长报告转十分钟幻灯片-alex_prompter.md) | `product-strategy` |
+| [`领域-商业点子访谈到执行蓝图-eptwts`](prompts/product-strategy/领域-商业点子访谈到执行蓝图-eptwts.md) | `product-strategy` |
+| [`领域-福特流水线压缩重复作业工时-free_ai_guides`](prompts/product-strategy/领域-福特流水线压缩重复作业工时-free_ai_guides.md) | `product-strategy` |
+| [`领域-行业全景战略分析-thisguyknowsai`](prompts/product-strategy/领域-行业全景战略分析-thisguyknowsai.md) | `product-strategy` |
+| [`领域-麦当劳网球场法把重复任务变系统-free_ai_guides`](prompts/product-strategy/领域-麦当劳网球场法把重复任务变系统-free_ai_guides.md) | `product-strategy` |
+| [`文本-NotebookLM学习研究二十条-sonalshukla3377`](prompts/research-pkm/文本-NotebookLM学习研究二十条-sonalshukla3377.md) | `research-pkm` |
+| [`文本-两段式股票分析师公司报告-RoshanStocks`](prompts/research-pkm/文本-两段式股票分析师公司报告-RoshanStocks.md) | `research-pkm` |
+| [`文本-建议背后隐藏激励三段拆解-free_ai_guides`](prompts/research-pkm/文本-建议背后隐藏激励三段拆解-free_ai_guides.md) | `research-pkm` |
+| [`文本-第一性原理博弈论苏格拉底导师-PromptLLM`](prompts/research-pkm/文本-第一性原理博弈论苏格拉底导师-PromptLLM.md) | `research-pkm` |
+| [`文本-纳瓦尔式苏格拉底提示工程导师-EXM7777`](prompts/research-pkm/文本-纳瓦尔式苏格拉底提示工程导师-EXM7777.md) | `research-pkm` |
+| [`文本-让AI追问找盲点九条-iannuttall`](prompts/research-pkm/文本-让AI追问找盲点九条-iannuttall.md) | `research-pkm` |
+| [`领域-供应链Excel案例与数据集生成器-_VictorUgwu`](prompts/research-pkm/领域-供应链Excel案例与数据集生成器-_VictorUgwu.md) | `research-pkm` |
+| [`文本-先给证据再说完成审稿人-alex_prompter`](prompts/eval-review/文本-先给证据再说完成审稿人-alex_prompter.md) | `eval-review` |
+| [`文本-肯尼迪危机室四轮决策压测-free_ai_guides`](prompts/eval-review/文本-肯尼迪危机室四轮决策压测-free_ai_guides.md) | `eval-review` |
+| [`领域-AI代理共享权限六项安全审计-Michael_Fenech_`](prompts/eval-review/领域-AI代理共享权限六项安全审计-Michael_Fenech_.md) | `eval-review` |
+| [`领域-签约前合同一页风险审阅-RoundtableSpace`](prompts/eval-review/领域-签约前合同一页风险审阅-RoundtableSpace.md) | `eval-review` |
+| [`文本-求职面试十二条提示包-sonalshukla3377`](prompts/writing/文本-求职面试十二条提示包-sonalshukla3377.md) | `writing` |
+| [`语音-GeminiTTS生日歌宠物家长导演稿-fofrAI`](prompts/audio/语音-GeminiTTS生日歌宠物家长导演稿-fofrAI.md) | `audio` |
+| [`语音-Suno分段制作规格歌词系统-0xInk_`](prompts/audio/语音-Suno分段制作规格歌词系统-0xInk_.md) | `audio` |
+| [`语音-Suno排除频段与噪声标签-hatolaborvol2`](prompts/audio/语音-Suno排除频段与噪声标签-hatolaborvol2.md) | `audio` |
+| [`语音-Suno高音质Remix风格与排除字段-xoMushinxo`](prompts/audio/语音-Suno高音质Remix风格与排除字段-xoMushinxo.md) | `audio` |
+| [`语音-爱尔兰酒馆民谣AI卡拉OK歌词-AndalaLabs`](prompts/audio/语音-爱尔兰酒馆民谣AI卡拉OK歌词-AndalaLabs.md) | `audio` |
+| [`文本-五区块访谈式财富策略师-TheEcomDaddy`](prompts/other/文本-五区块访谈式财富策略师-TheEcomDaddy.md) | `other` |
+| [`文本-原相机选角写实图像提示改写器-IamEmily2050`](prompts/image-gen/文本-原相机选角写实图像提示改写器-IamEmily2050.md) | `image-gen` |
+| [`文本-末日都市科幻双模型图像提示导演-IamEmily2050`](prompts/image-gen/文本-末日都市科幻双模型图像提示导演-IamEmily2050.md) | `image-gen` |
+| [`文本-逐题追问式图像提示生成器-eptwts`](prompts/image-gen/文本-逐题追问式图像提示生成器-eptwts.md) | `image-gen` |
+
+
 ## 一句话
 
 全渠道就这一句，别自己编：

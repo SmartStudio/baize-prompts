@@ -302,3 +302,9 @@ marketing-sales ×2、product-strategy ×1、eval-review ×1、audio ×1、image
 ## License
 
 MIT. 「白泽明理」「Formal eXplainable AI」是 Baize Tech 的牌子。
+
+## 延伸阅读
+
+- [什么是 Loop Engineering：让 AI 先自查再交付](https://fxai.ai/notes/what-is-loop-engineering/)：讲「先自查再交付」的做法，和这里「没跑过 = 不出厂」是一个思路。
+- [企业上线 Agent 前，Agent 评测要跑几个任务、每个跑几次](https://fxai.ai/notes/agent-eval-suite-pass-rate-variance/)：讲固定任务、多次运行、看通过率和波动，评测提示词也适用。
+- [AI 落地场景先挑哪类？先看结果能不能当场验证](https://fxai.ai/notes/ai-verifiable-work-first/)：讲为什么先挑结果能当场验证的任务，这也是评测能成立的前提。
